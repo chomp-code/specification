@@ -27,7 +27,7 @@ An unsigned byte.
 
 ### `u32`
 
-An unsigned 32-bit little-endian unsigned integer.
+An unsigned 32-bit little-endian integer.
 
 | Bits                             | Value      |
 | -------------------------------- | ---------- |
