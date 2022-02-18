@@ -6,15 +6,6 @@ The bytecode itself describes a constant-time sequence of operations, but implem
 
 ## Types
 
-### `boolean`
-
-A single bit.
-
-| Bit | Value |
-| --- | ----- |
-| 0   | False |
-| 1   | True  |
-
 ### `u8`
 
 An unsigned byte.
@@ -39,9 +30,7 @@ An unsigned 32-bit little-endian integer.
 
 ### Header
 
-The stream starts with a `u8` specifying the number of `boolean` arguments which must be given when executing the program.  These form the initial stack, in order (first = the bottom of the stack, last = the top of the stack).
-
-There is then a `u8` specifying the number of `u8` arguments which must be given when executing the program.  These are added to the top of the stack, in order (first = towards the bottom of the stack, last = the top of the stack).
+The stream starts with a `u8` specifying the number of `u8` arguments which must be given when executing the program.  These form the initial stack, in order (first = the bottom of the stack, last = the top of the stack).
 
 ## Operations
 
@@ -51,29 +40,19 @@ Each operation starts with a `u8` specifying the opcode, then a list of the argu
 
 | Name              | Opcode | Parameter | Parameter | Parameter | Result             |
 | ----------------- | ------ | --------- | --------- | --------- | ------------------ |
-| Not               | 0      | False     |           |           | True               |
-|                   |        | True      |           |           | False              |
-| And               | 1      | False     | False     |           | False              |
-|                   |        | True      | False     |           | False              |
-|                   |        | False     | True      |           | False              |
-|                   |        | True      | True      |           | True               |
-| Or                | 2      | False     | False     |           | False              |
-|                   |        | True      | False     |           | True               |
-|                   |        | False     | True      |           | True               |
-|                   |        | True      | True      |           | True               |
-| Add               | 3      | 20        | 50        |           | 70                 |
+| Add               | 0      | 20        | 50        |           | 70                 |
 |                   |        | 250       | 6         |           | Undefined behavior |
-| ClampedAdd        | 4      | 20        | 50        |           | 70                 |
+| ClampedAdd        | 1      | 20        | 50        |           | 70                 |
 |                   |        | 250       | 6         |           | 255                |
-| WrappedAdd        | 5      | 20        | 50        |           | 70                 |
+| WrappedAdd        | 2      | 20        | 50        |           | 70                 |
 |                   |        | 250       | 6         |           | 0                  |
-| Subtract          | 6      | 50        | 20        |           | 30                 |
+| Subtract          | 3      | 50        | 20        |           | 30                 |
 |                   |        | 40        | 41        |           | Undefined behavior |
-| ClampedSubtract   | 7      | 50        | 20        |           | 30                 |
+| ClampedSubtract   | 4      | 50        | 20        |           | 30                 |
 |                   |        | 40        | 41        |           | 0                  |
-| WrappedSubtract   | 8      | 50        | 20        |           | 30                 |
+| WrappedSubtract   | 5      | 50        | 20        |           | 30                 |
 |                   |        | 40        | 41        |           | 255                |
-| AmplitudeModulate | 9      | 25        | 170       |           | 16                 |
+| AmplitudeModulate | 6      | 25        | 170       |           | 16                 |
 
 It is an error to specify any other opcode.
 
@@ -86,8 +65,8 @@ Each argument is a `u32`:
 | 2          | The value third from the bottom of the stack.             |
 | ...        | (range of stack pointers)                                 |
 | 4294967039 | The value 4294967038 levels from the bottom of the stack. |
-| 4294967040 | Constant `boolean` of false or `u8` of 0.                 |
-| 4294967041 | Constant `boolean` of true or `u8` of 1.                  |
+| 4294967040 | Constant `u8` of 0.                                       |
+| 4294967041 | Constant `u8` of 1.                                       |
 | 4294967042 | Constant `u8` of 2.                                       |
 | ...        | (range of `u8` constants)                                 |
 | 4294967295 | Constant `u8` of 255.                                     |
