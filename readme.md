@@ -74,3 +74,5 @@ Each argument is a `u32`:
 It is an error to end the stream before all arguments to the final operation are fully specified.
 
 It is an error to mismatch argument types, e.g. `Not 32` or `Add false, false`.
+
+It is an error to reference the result of the current instruction, or any previous instruction.
