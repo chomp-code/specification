@@ -71,3 +71,4 @@ Streams meeting any of the following criteria are deemed invalid and further pro
 - Two or more results of an instruction have the same identifier.
 - The result of an instruction has the same identifier as an input.
 - The result of an instruction has the same identifier as the result of a previous instruction.
+- An argument references a nonexistent identifier.
