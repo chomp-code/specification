@@ -25,4 +25,4 @@ The remainder of the stream is a repeating data structure describing an instruct
 
 - It is not possible to give more than 255 inputs into a program.
 - It is not possible to take more than 255 outputs from a program.
-- It is not possible to reference stack indices beyond the first 65280.  A stack index overflow is expected to be detected and handled by the program generating the stream, most likely by refusing to generate the stream at all.  Note that outputs can still be taken from the top of the stack, even if arguments of new instructions cannot reference them.
+- It is not possible to reference stack indices beyond the first 65280 as arguments.  A stack index overflow is expected to be detected and handled by the program generating the stream, most likely by refusing to generate the stream at all.  Note that outputs can still be taken from the top of the stack, even if arguments of new instructions cannot reference them.
