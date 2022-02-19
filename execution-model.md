@@ -22,7 +22,7 @@ Programs meeting any of the following criteria are deemed invalid and further pr
 - An instruction references a stack index which is not populated by the time it executes; for example:
   - The stack index refers to an output of the instruction which is being executed.
   - The stack index refers to an output of an instruction subsequent to that being executed.
-  - The stack index is greater than that which will be populated by any instruction in the program.
+  - The stack index is greater than that which will be populated by any input or instruction in the program.
 - The stack has fewer items after all instructions are executed than it is to output.
 
 ## Dubious Programs
