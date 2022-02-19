@@ -8,7 +8,7 @@ The inputs to the program are first pushed onto the stack; for example, the firs
 
 Then, for each instruction in the program:
 
-- The instruction is executed.  Each of its argument is either a constant included in the program itself, or a reference to an item in the stack, by index.
+- The instruction is executed.  Each of its arguments is either a constant included in the program itself, or a reference to an item in the stack, by index.
 - The result(s) of the instruction are pushed onto the top of the stack, in order.  For example, if there are 4 items in the stack before the instruction is executed, and the instruction generates two results, the first is placed at index 4, and the second is placed at index 5.
 
 Then, the outputs from the program are taken from the top of the stack.  For example, if the program has 2 outputs and 7 items in its stack, the first output is at index 5, and the second is at index 6.
