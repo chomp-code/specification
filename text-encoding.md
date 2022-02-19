@@ -40,7 +40,7 @@ The first (non-blank) line must be as follows:
 The second (non-blank) line must be as follows:
 
 - Any number of spaces (ASCII code 32).
-- "inputs" (ASCII codes 105, 110, 112, 117, 116 and 115).
+- "outputs" (ASCII codes 111, 117, 116, 112, 117, 116 and 115).
 - Any number of spaces (ASCII code 32).
 - A semicolon (ASCII code 58).
 - Any number of spaces (ASCII code 32).
