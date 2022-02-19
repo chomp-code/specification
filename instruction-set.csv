@@ -1,0 +1,8 @@
+opcode,name,inputs,outputs,description
+0,fastadd,2,1,Adds two values together.  Behavior is undefined should the result be greater than 255.
+1,clampadd,2,1,Adds two values together.  Clamps to 255 should the result be greater.
+2,wrapadd,2,1,Adds two values together.  256 is subtracted from the result should it be greater than 255.
+3,fastsub,2,1,Subtracts the second argument from the first.  Behavior is undefined should the second argument be greater than the first.
+4,clampsub,2,1,Subtracts the second argument from the first.  Clamps to 0 should the result be lesser.
+5,wrapsub,2,1,Subtracts the second argument from the first.  256 is added to the result should it be less than 0.
+6,ampmod,2,1,Performs amplitude modulation; if the arguments and result were mapped to unit intervals (0 = 0, 255 = 1) this would be equivalent to a multiplication.

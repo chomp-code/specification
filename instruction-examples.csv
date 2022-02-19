@@ -1,0 +1,12 @@
+name,argument0,argument1,result0
+fastadd,20,50,70
+clampadd,20,50,70
+clampadd,250,6,255
+wrapadd,20,50,70
+wrapadd,250,6,0
+fastsub,50,20,30
+clampsub,50,20,30
+clampsub,40,41,0
+wrapsub,50,20,30
+wrapsub,40,41,255
+ampmod,25,170,16
