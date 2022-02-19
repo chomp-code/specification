@@ -1,6 +1,6 @@
 # [chomp-code specification](./readme.md) > binary encoding
 
-A chomp-code program can be described as an ASCII-encoded text stream.
+A chomp-code program can be described as an ASCII-encoded text stream.  This will usually be identified by a file extension of "cct".
 
 ## Preprocessing
 

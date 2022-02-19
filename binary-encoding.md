@@ -1,6 +1,6 @@
 # [chomp-code specification](./readme.md) > binary encoding
 
-A chomp-code program can be described as a binary stream.
+A chomp-code program can be described as a binary stream.  This will usually be identified by a file extension of "ccb".
 
 Unsigned 8-bit integers are encoded as follows:
 
