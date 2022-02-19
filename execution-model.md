@@ -4,7 +4,7 @@
 
 A chomp-code program centers around an initially empty stack of unsigned 8-bit integers.  An index into this stack is relative to the bottom; for example, index 0 is at the bottom, index 1 is first from the bottom, and so on.
 
-The inputs to the program are first pushed onto the stack.  For example, the first argument is placed at index 0, the second at index 1, and so on.
+The inputs to the program are first pushed onto the stack; for example, the first argument is placed at index 0, the second at index 1, and so on.
 
 Then, for each instruction in the program:
 
